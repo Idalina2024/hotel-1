@@ -36,7 +36,7 @@
 
 	<a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
 
-	<a class="title" href="index.php"><h1>HOTEL</h1></a>
+	<a class="title" href="index.php"><h1>HOTEL TRAVEL</h1></a>
     
 	<div id="header">
 		<div id="nav">
@@ -49,7 +49,7 @@
 	</div>
 	<div id="body">
 		<h2>Acerca de: </h2>
-		<img src="img/hotel1.jpg" height="240" width="320" />
+		<img src="img/hotel2.jpg" height="240" width="320" />
 		<p> 
 			Con más de 35 años de experiencia en el rubro, nuestro hotel se posiciona como "el tradicional hotel del centro" que fundado sobre las bases del servicio ofrece a sus pasajeros todos las comodidades para un buen descanso y disfrute de su estadía.
 			Ubicado en una privilegiada zona residencial de la ciudad de Neuquén, en la intersección de las calles Carlos H. Rodriguez y Antártida Argentina, y a metros de los principales puntos comerciales de la ciudad, nuestro hotel ofrece 15 habitaciones distribuidas en 3 pisos, entre las cuales puede encontrar departamentos y habitaciones singles, matrimoniales y familiares. 
