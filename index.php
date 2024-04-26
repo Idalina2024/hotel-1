@@ -57,7 +57,7 @@
 	</div>
 
 	<div id="foot">
-		Joel 
+		Carlos Chavez Fuentes
 	</div>
 </body>
 </html>
