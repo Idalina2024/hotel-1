@@ -90,15 +90,18 @@ if(isset($_POST['operacion'])){
 
 		<form class="reserva" method="POST" action="reservasIndex.php">
 			<ul>
-				<input type="hidden" name="idCliente" value="<?php echo $_SESSION['idCliente']; ?>">
+			<input type="hidden" name="idCliente" value="<?php echo isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : ''; ?>">
+
 				<input type="hidden" name="idReserva" value="<?php echo $res->getIdReserva() ?>" />
 	     		<input type="hidden" name="operacion" value="<?php echo $res->getIdReserva() > 0 ? 'actualizar' : 'registrar' ?>" />
 
 
 
-				<li><input required type="date" name="checkin" value="<?php $_POST['checkin']?>"></li>
-				<li><input required type="date" name="checkout" value="<?php $_POST['checkout']?>"></li>
-				<li><input required length="2" type="number" name="cantPersonas" value="<?php $_POST['cantPersonas']?>"></li>
+				 <li><input required type="date" name="checkin" value="<?php echo isset($_POST['checkin']) ? $_POST['checkin'] : ''; ?>"></li>
+
+				 <li><input required type="date" name="checkout" value="<?php echo isset($_POST['checkout']) ? $_POST['checkout'] : ''; ?>"></li>
+
+				 <li><input required length="2" type="number" name="cantPersonas" value="<?php echo isset($_POST['cantPersonas']) ? $_POST['cantPersonas'] : ''; ?>"></li>
 
 				<select required name="idHabitacion">
 					<option selected value="0">--Seleccione--</option>
