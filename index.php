@@ -57,7 +57,7 @@
 	</div>
 
 	<div id="foot">
-		Joel Jeckeln © 2020
+		Joel 
 	</div>
 </body>
 </html>
