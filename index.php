@@ -5,6 +5,22 @@
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="icon" type="image/png" href="img/icono-hotel.ico">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .square-image {
+            max-width: 50%;
+            height: auto;
+            max-height: 200px; /* Este es el tamaño máximo que puedes ajustar según tus necesidades */
+        }
+        .carousel-container {
+            max-width: 800px; /* Por ejemplo, establece el ancho máximo según tus necesidades */
+            margin: 0 auto; /* Esto centrará el contenedor en la página */
+        }
+        /* Cambiar el color de las flechas del carrusel a verde */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
     <?php 
@@ -49,24 +65,26 @@
     </div>
     <div id="body">
         <h2>Acerca de: </h2>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/hotel1.jpg" class="d-block w-100 square-image" alt="50">
+        <div class="carousel-container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/hotel1.jpg" class="d-block w-100 square-image" alt="50">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/hotel2.jpg" class="d-block w-100 square-image" alt="50">
+                    </div>
+                    <!-- Agrega más imágenes aquí si es necesario -->
                 </div>
-                <div class="carousel-item">
-                    <img src="img/hotel2.jpg" class="d-block w-100 square-image" alt="50">
-                </div>
-                <!-- Agrega más imágenes aquí si es necesario -->
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
         <p> 
             En nuestro hotel, cada momento es una experiencia única. Desde el momento en que entras por nuestras puertas, te envolvemos en un mundo de lujo y serenidad. Nuestras habitaciones son un santuario de confort, donde cada detalle ha sido cuidadosamente seleccionado para tu placer.
