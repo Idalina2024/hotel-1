@@ -12,7 +12,7 @@
 <head>
 	<title>Hotel - Habitaciones</title>
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
-	<link rel ="icon" type="image/png" href="img/icono-hotel.ico">
+	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -39,6 +39,7 @@
 	<a class="title" href="index.php"><h1>HOTEL</h1></a>
     
 	<div id="header">
+		
 		<div id="nav">
 			<ul><li><a href="habitacionesIndex.php">Habitaciones</a></li>
 				<li><a href="reservasIndex.php">Reservas</a></li>
@@ -56,6 +57,15 @@
 			<input onchange="this.form.submit();" name="floor" type="radio" value="2" id="floor2" <?php if (isset($_POST['floor']) && $_POST['floor'] == '2'){echo 'checked="checked"';} ?>><label for="floor2">Piso 2</label>
 			<input onchange="this.form.submit();" name="floor" type="radio" value="3" id="floor3" <?php if (isset($_POST['floor']) && $_POST['floor'] == '3'){echo 'checked="checked"';} ?>><label for="floor3">Piso 3</label>
 		</form>
+		<div class="carousel-item active" style="display: inline-block; margin-right: 100px;">
+          <img src="img/ha2.jpg" class="d-block w-100 square-image" style="width: 200px; height: auto;" alt="50">
+        </div>
+        <div class="carousel-item active" style="display: inline-block; margin-right: 100px;">
+            <img src="img/ha3.jpg" class="d-block w-100 square-image" style="width: 270px; height: auto;" alt="50">
+        </div>
+        <div class="carousel-item active" style="display: inline-block;">
+             <img src="img/h4.jpg" class="d-block w-100 square-image" style="width: 152px; height: auto;" alt="50">
+        </div>
 
 		<?php
 
@@ -91,7 +101,7 @@
 	</div>
 
 	<div id="foot">
-		Joel Jeckeln © 2020
+	Carlos Chavez Fuentes
 	</div>
 </body>
 </html>

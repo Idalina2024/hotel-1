@@ -3,7 +3,7 @@
 <head>
     <title>Hostal Travel</title>
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
-    <link rel="icon" type="image/png" href="img/icono-hotel.ico">
+    <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .square-image {
@@ -69,10 +69,10 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/hotel1.jpg" class="d-block w-100 square-image" alt="50">
+                        <img src="img/hotel2.jpg" class="d-block w-100 square-image" alt="50">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/hotel2.jpg" class="d-block w-100 square-image" alt="50">
+                        <img src="img/hotel3.jpg" class="d-block w-100 square-image" alt="100">
                     </div>
                     <!-- Agrega más imágenes aquí si es necesario -->
                 </div>

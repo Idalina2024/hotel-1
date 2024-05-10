@@ -43,7 +43,7 @@ if(isset($_POST['idCliente'])){
 <head>
 	<title>Hotel - Registro</title>
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
-	<link rel ="icon" type="image/png" href="img/icono-hotel.ico">
+	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -81,7 +81,7 @@ if(isset($_POST['idCliente'])){
 
 	<div id="body">
 
-
+        
 		<h2>Registro Clientes</h2>
 
 		<form action="registro.php" method="POST">
@@ -96,16 +96,7 @@ if(isset($_POST['idCliente'])){
         <label>Contraseña</label> <input type="password" name="contrasena" length="25" />
         <label>DNI</label> <input type="number" name="dni" length="8" value="<?php echo $cli->getDni(); ?>" />
         <label>Pais</label>
-
-
-
-
-
-
-
-
-
-
+		
         <!-- Lista desplegable auto-completable Paises -->
         <select name="pais">
 

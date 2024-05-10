@@ -50,7 +50,7 @@ if(isset($_POST['operacion'])){
 <head>
 	<title>Hotel - Reservas</title>
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
-	<link rel ="icon" type="image/png" href="img/icono-hotel.ico">
+	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
