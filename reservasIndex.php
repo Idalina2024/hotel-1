@@ -126,7 +126,7 @@ if(isset($_POST['operacion'])){
 	</div>
 
 	<div id="foot">
-		Joel Jeckeln © 2020
+		Juan Carlos Chavez Fuentes © 2020
 	</div>
 </body>
 </html>
