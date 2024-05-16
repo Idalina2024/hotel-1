@@ -111,7 +111,7 @@
     </div>
 
     <div id="foot">
-        Carlos Chavez Fuentes
+       Juan Carlos Chavez Fuentes
     </div>
 
     <style>
