@@ -50,11 +50,11 @@
 		<h2>Contacto </h2>
 		<div id="contacto">
             <h3>Nuestro e-mail</h3>
-            <p>hotel@hotel.com</p>
+            <p>hostaltravel@.com</p>
             <h3>Telefono:</h3>
-            <p>4427175 o (+54)2995938151</p>
+            <p>917915214</p>
             <h3>Dirección:</h3>
-            <p>Carlos H. Rodriguez 1600</p>
+            <p>jr Dos de Mayo 673</p>
         </div>
         <form id="comentario">
             <legend>Deja un comentario</legend>
@@ -66,7 +66,7 @@
 	</div>
 
 	<div id="foot">
-		Joel Jeckeln © 2020
+		Juan Carlos Chavez Fuentes © 2020
 	</div>
 </body>
 </html>
