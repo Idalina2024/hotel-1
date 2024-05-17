@@ -8,7 +8,7 @@
     <style>
         .carousel-container {
             width: 100%;
-            height: 50vh;
+            height: 80vh;
             margin: 0 auto;
             position: relative;
         }
@@ -21,7 +21,7 @@
         }
         .carousel-item img {
             width: 100;
-            height: 50%;
+            height: 80%;
             object-fit: cover;
         }
         .carousel-caption {
