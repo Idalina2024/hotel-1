@@ -7,30 +7,37 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .carousel-container {
-            max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
-            margin: 0 auto; /* Esto centrará el contenedor en la página */
+            width: 100%;
+            height: 50vh;
+            margin: 0 auto;
             position: relative;
         }
         .carousel-inner {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        .carousel-item {
+            position: relative;
+            height: 100vh;
         }
         .carousel-item img {
-            width: 100%; /* Asegura que la imagen ocupe todo el ancho del carrusel */
-            max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
-            object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse */
-            border-radius: 15px;
-            transition: transform 0.5s ease;
+            width: 100;
+            height: 50%;
+            object-fit: cover;
         }
-        .carousel-item img:hover {
-            transform: scale(1.05);
+        .carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            z-index: 10;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1s ease-in-out;
         }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            background-color: green;
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
-            padding: 10px;
+            padding: 15px;
         }
         .carousel-control-prev,
         .carousel-control-next {
@@ -38,19 +45,29 @@
         }
         .carousel-control-prev:hover,
         .carousel-control-next:hover {
-            background-color: darkgreen;
+            background-color: rgba(0, 0, 0, 0.7);
         }
         .carousel-indicators {
-            bottom: -30px;
+            bottom: 20px;
         }
         .carousel-indicators li {
-            background-color: green;
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
             width: 12px;
             height: 12px;
         }
         .carousel-indicators .active {
-            background-color: darkgreen;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -107,10 +124,18 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/hotel2.jpg" class="d-block w-100 square-image" alt="50">
+                        <img src="img/hotel2.jpg" class="d-block w-100" alt="Hotel 1">
+                        <div class="carousel-caption">
+                            <h3>Bienvenido a Hostal Travel</h3>
+                            <p>Disfruta de una estancia inolvidable</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/hotel3.jpg" class="d-block w-100 square-image" alt="100">
+                        <img src="img/hotel3.jpg" class="d-block w-100" alt="Hotel 2">
+                        <div class="carousel-caption">
+                            <h3>Confort y lujo</h3>
+                            <p>Nuestras habitaciones están diseñadas para tu comodidad</p>
+                        </div>
                     </div>
                     <!-- Agrega más imágenes aquí si es necesario -->
                 </div>
@@ -130,7 +155,11 @@
     </div>
 
     <div id="foot">
+<<<<<<< HEAD
          Juan Carlos Chavez Fuentes
+=======
+      Juan Carlos Chavez Fuentes
+>>>>>>> 44b2104db4bb6b6b4c05ddc829798b08ffcfbfb9
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
