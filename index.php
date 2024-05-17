@@ -6,19 +6,51 @@
     <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .square-image {
-            max-width: 50%;
-            height: auto;
-            max-height: 200px; /* Este es el tamaño máximo que puedes ajustar según tus necesidades */
-        }
         .carousel-container {
-            max-width: 800px; /* Por ejemplo, establece el ancho máximo según tus necesidades */
+            max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
             margin: 0 auto; /* Esto centrará el contenedor en la página */
+            position: relative;
         }
-        /* Cambiar el color de las flechas del carrusel a verde */
+        .carousel-inner {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-item img {
+            width: 100%; /* Asegura que la imagen ocupe todo el ancho del carrusel */
+            max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+            object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse */
+            border-radius: 15px;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item img:hover {
+            transform: scale(1.05);
+        }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: green;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: darkgreen;
+        }
+        .carousel-indicators {
+            bottom: -30px;
+        }
+        .carousel-indicators li {
+            background-color: green;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+        }
+        .carousel-indicators .active {
+            background-color: darkgreen;
         }
     </style>
 </head>
@@ -52,11 +84,12 @@
 
     <a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
 
-    <a class="title" href="index.php"><h1>HOTEL TRAVEL</h1></a>
+    <a class="title" href="index.php"><h1>HOSTAL TRAVEL</h1></a>
     
     <div id="header">
         <div id="nav">
-            <ul><li><a href="habitacionesIndex.php">Habitaciones</a></li>
+            <ul>
+                <li><a href="habitacionesIndex.php">Habitaciones</a></li>
                 <li><a href="reservasIndex.php">Reservas</a></li>
                 <li><a href="registro.php">Registro</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
@@ -66,7 +99,12 @@
     <div id="body">
         <h2>Acerca de: </h2>
         <div class="carousel-container">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/hotel2.jpg" class="d-block w-100 square-image" alt="50">
@@ -76,18 +114,18 @@
                     </div>
                     <!-- Agrega más imágenes aquí si es necesario -->
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
         </div>
         <p> 
-            En nuestro hotel, cada momento es una experiencia única. Desde el momento en que entras por nuestras puertas, te envolvemos en un mundo de lujo y serenidad. Nuestras habitaciones son un santuario de confort, donde cada detalle ha sido cuidadosamente seleccionado para tu placer.
+            En nuestro hostal, cada momento es una experiencia única. Desde el momento en que entras por nuestras puertas, te envolvemos en un mundo de lujo y serenidad. Nuestras habitaciones son un santuario de confort, donde cada detalle ha sido cuidadosamente seleccionado para tu placer.
         </p>
     </div>
 
