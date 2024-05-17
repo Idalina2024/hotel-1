@@ -35,7 +35,7 @@
 	<a class="engranaje" style="display: <?php if(isset($_SESSION['nombre'])){ echo "none"; } ?> " href="loginEmpleados.php"><img src="img/engranaje.png" height="25" width="25" /></a>
 
 	<a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
-	<a class="title" href="index.php"><h1>HOTEL</h1></a>
+	<a class="title" href="index.php"><h1>HOSTAL</h1></a>
 	<div id="header">
 		<div id="nav">
 			<ul><li><a href="habitacionesIndex.php">Habitaciones</a></li>

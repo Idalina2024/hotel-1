@@ -48,7 +48,7 @@ if(isset($_POST['operacion'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hotel - Reservas</title>
+	<title>Hostal - Reservas</title>
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@ if(isset($_POST['operacion'])){
 
 	<a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
 
-	<a class="title" href="index.php"><h1>HOTEL</h1></a>
+	<a class="title" href="index.php"><h1>HOSTAL</h1></a>
     
 	<div id="header">
 		<div id="nav">

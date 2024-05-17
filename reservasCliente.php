@@ -25,7 +25,7 @@ if (isset($_POST['operacion'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hotel - Mis reservas</title>
+	<title>Hostal - Mis reservas</title>
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 	<link rel ="icon" type="image/png" href="img/icono-hotel.ico">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
@@ -51,7 +51,7 @@ if (isset($_POST['operacion'])) {
 
 	<a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
 
-	<a class="title" href="index.php"><h1>HOTEL</h1></a>
+	<a class="title" href="index.php"><h1>HOSTAL</h1></a>
     
 	<div id="header">
 		<div id="nav">
@@ -104,7 +104,7 @@ if (isset($_POST['operacion'])) {
 	</div>
 
 	<div id="foot">
-		Joel Jeckeln © 2020
+		Juan Carlos Chavez Fuentes © 2020
 	</div>
 </body>
 </html>
