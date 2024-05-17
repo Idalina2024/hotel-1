@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hotel - Habitaciones</title>
+	<title>Hostal - Habitaciones</title>
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
@@ -66,6 +66,7 @@
         <div class="carousel-item active" style="display: inline-block;">
              <img src="img/h4.jpg" class="d-block w-100 square-image" style="width: 152px; height: auto;" alt="50">
         </div>
+		
 
 		<?php
 
@@ -90,10 +91,7 @@
 		if(isset($_POST['floor'])){
 
 	?>
-		<div id="plano">
-			<img src="img/<?php echo $route; ?>">
-			
-		</div>
+		
 		<?php 
 
 		}
