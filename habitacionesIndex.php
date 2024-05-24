@@ -14,6 +14,13 @@
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
+	<style>
+	    .square-image {
+	        border: 5px solid #ccc; /* Establece un borde gris */
+	        border-radius: 10px; /* Redondea los bordes */
+	        padding: 5px; /* Añade espacio entre la imagen y el borde */
+	    }
+	</style>
 </head>
 <body>
 	<?php 
