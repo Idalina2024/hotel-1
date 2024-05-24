@@ -90,7 +90,7 @@
 	<?php
 		if(isset($_POST['floor'])){
 
-	?>
+	?>set_socket_blocking
 		
 		<?php 
 
