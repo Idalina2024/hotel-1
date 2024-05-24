@@ -5,7 +5,33 @@
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Añade las fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        body {
+            background-color: #FFFFFF; /* Celeste pastel */
+            font-family: 'Roboto', sans-serif; /* Fuente para el cuerpo del texto */
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        .container {
+            background-color: #FFFFFF; /* Celeste pastel */
+            min-height: 100%;
+        }
+        .header-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            background-color: transparent; /* Fondo transparente */
+        }
+        .header-title img {
+            height: 50px;
+            margin-right: 10px;
+        }
         .carousel-container {
             width: 100%;
             height: 80vh;
@@ -69,158 +95,107 @@
                 transform: none;
             }
         }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
+        /* Estilo para el título con la nueva fuente */
+        .title h1 {
+            font-family: 'Lobster', cursive; /* Aplica la fuente Lobster al título */
+            color: #01579B; /* Azul más claro */
+            margin: 0;
+            background-color: transparent; /* Fondo transparente */
         }
     </style>
 </head>
 <body>
-    <?php 
-    session_start();
+    <div class="container">
+        <?php 
+        session_start();
 
-    if(isset($_SESSION['nombre'])){
-        $nombre = $_SESSION['nombre'];
-        $apellido = $_SESSION['apellido'];
-    }
-    ?>
+        if(isset($_SESSION['nombre'])){
+            $nombre = $_SESSION['nombre'];
+            $apellido = $_SESSION['apellido'];
+        }
+        ?>
 
-    <?php 
-    if(isset($_SESSION['nombre'])){ ?>
-        <ul class="dropdown">
-            <li>
-                <a><img style="display:inline;margin-right:1%;" height="16" width="16" src="img/user.png"><?php echo "$nombre $apellido" ?></a>
-                <ul>
-                    <li><a href="reservasCliente.php">Mis reservas</a></li>
-                    <li><a href="perfil.php">Mi perfil</a></li>
-                    <li><a href="logout.php">Cerrar sesión</a></li>
-                </ul>
-            </li>
-        </ul>
-        <?php
-    }
-    ?>
-
-    <a class="engranaje" style="display: <?php if(isset($_SESSION['nombre'])){ echo "none"; } ?> " href="loginEmpleados.php"><img src="img/engranaje.png" height="25" width="25" /></a>
-
-    <a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
-
-    <a class="title" href="index.php"><h1>HOSTAL TRAVEL</h1></a>
-    
-    <div id="header">
-        <div id="nav">
-            <ul>
-                <li><a href="habitacionesIndex.php">Habitaciones</a></li>
-                <li><a href="reservasIndex.php">Reservas</a></li>
-                <li><a href="registro.php">Registro</a></li>
-                <li><a href="contacto.php">Contacto</a></li>
+        <?php 
+        if(isset($_SESSION['nombre'])){ ?>
+            <ul class="dropdown">
+                <li>
+                    <a><img style="display:inline;margin-right:1%;" height="16" width="16" src="img/user.png"><?php echo "$nombre $apellido" ?></a>
+                    <ul>
+                        <li><a href="reservasCliente.php">Mis reservas</a></li>
+                        <li><a href="perfil.php">Mi perfil</a></li>
+                        <li><a href="logout.php">Cerrar sesión</a></li>
+                    </ul>
+                </li>
             </ul>
+            <?php
+        }
+        ?>
+
+        <a class="engranaje" style="display: <?php if(isset($_SESSION['nombre'])){ echo "none"; } ?> " href="loginEmpleados.php"><img src="img/engranaje.png" height="25" width="25" /></a>
+
+        <a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
+
+        <div class="header-title">
+            <img src="img/logohostaultimo1.jpg" alt="Logo">
+            <a class="title" href="index.php"><h1>HOSTAL TRAVEL</h1></a>
         </div>
-    </div>
-    <div id="body">
-        <h2>Acerca de: </h2>
-        <div class="carousel-container">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/hotel2.jpg" class="d-block w-100" alt="Hotel 1">
-                        <div class="carousel-caption">
-                            <h3>Bienvenido a Hostal Travel</h3>
-                            <p>Disfruta de una estancia inolvidable</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/hotel3.jpg" class="d-block w-100" alt="Hotel 2">
-                        <div class="carousel-caption">
-                            <h3>Confort y lujo</h3>
-                            <p>Nuestras habitaciones están diseñadas para tu comodidad</p>
-                        </div>
-                    </div>
-                    <!-- Agrega más imágenes aquí si es necesario -->
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-        <p> 
-            En nuestro hostal, cada momento es una experiencia única. Desde el momento en que entras por nuestras puertas, te envolvemos en un mundo de lujo y serenidad. Nuestras habitaciones son un santuario de confort, donde cada detalle ha sido cuidadosamente seleccionado para tu placer.
-        </p>
         
-        <!-- Agregando imágenes al final del texto en estilo de tarjeta de Bootstrap con borde gris -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card border border-secondary" style="width: 18rem;">
-                        <img src="img/ha2.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <p class="card-text">Explora la belleza y el confort que ofrecemos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border border-secondary" style="width: 18rem;">
-                        <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <p class="card-text">Relájate en nuestras cómodas habitaciones.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border border-secondary" style="width: 18rem;">
-                        <img src="img/h4.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <p class="card-text">Disfruta de nuestras instalaciones modernas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card border border-secondary" style="width: 18rem;">
-                        <img src="img/ha2.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <p class="card-text">Saborea nuestra exquisita gastronomía.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border border-secondary" style="width: 18rem;">
-                        <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <p class="card-text">Descubre nuestras actividades recreativas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border border-secondary" style="width: 18rem;">
-                        <img src="img/h4.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
-                        <div class="card-body">
-                            <p class="card-text">Relájate en nuestras áreas comunes.</p>
-                        </div>
-                    </div>
-                </div>
+        <div id="header">
+            <div id="nav">
+                <ul>
+                    <li><a href="habitacionesIndex.php">Habitaciones</a></li>
+                    <li><a href="reservasIndex.php">Reservas</a></li>
+                    <li><a href="registro.php">Registro</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                </ul>
             </div>
         </div>
+        <div id="body">
+            <h2>Acerca de: </h2>
+            <div class="carousel-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/hotel2.jpg" class="d-block w-100" alt="Hotel 1">
+                            <div class="carousel-caption">
+                                <h3>Bienvenido a Hostal Travel</h3>
+                                <p>Disfruta de una estancia inolvidable</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/hotel3.jpg" class="d-block w-100" alt="Hotel 2">
+                            <div class="carousel-caption">
+                                <h3>Confort y lujo</h3>
+                                <p>Nuestras habitaciones están diseñadas para tu comodidad</p>
+                            </div>
+                        </div>
+                        <!-- Agrega más imágenes aquí si es necesario -->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <p> 
+                En nuestro hostal, cada momento es una experiencia única. Desde el momento en que entras por nuestras puertas, te envolvemos en un mundo de lujo y serenidad. Nuestras habitaciones son un santuario de confort, donde cada detalle ha sido cuidadosamente seleccionado para tu placer.
+            </p>
+            
+        </div>
+
+        <div id="foot">
+          Juan Carlos Chavez Fuentes
+        </div>
     </div>
-
-    <div id="foot">
-
-
-      Juan Carlos Chavez Fuentes
-
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
