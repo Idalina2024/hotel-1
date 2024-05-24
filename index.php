@@ -155,11 +155,10 @@
     </div>
 
     <div id="foot">
-<<<<<<< HEAD
-         Juan Carlos Chavez Fuentes
-=======
+
+
       Juan Carlos Chavez Fuentes
->>>>>>> 44b2104db4bb6b6b4c05ddc829798b08ffcfbfb9
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
