@@ -8,7 +8,7 @@
     <style>
         .carousel-container {
             width: 100%;
-            height: 50vh;
+            height: 80vh;
             margin: 0 auto;
             position: relative;
         }
@@ -20,8 +20,8 @@
             height: 100vh;
         }
         .carousel-item img {
-            width: 100;
-            height: 50%;
+            width: 100%;
+            height: 80%;
             object-fit: cover;
         }
         .carousel-caption {
@@ -68,6 +68,10 @@
                 opacity: 1;
                 transform: none;
             }
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -152,6 +156,62 @@
         <p> 
             En nuestro hostal, cada momento es una experiencia única. Desde el momento en que entras por nuestras puertas, te envolvemos en un mundo de lujo y serenidad. Nuestras habitaciones son un santuario de confort, donde cada detalle ha sido cuidadosamente seleccionado para tu placer.
         </p>
+        
+        <!-- Agregando imágenes al final del texto en estilo de tarjeta de Bootstrap con borde gris -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border border-secondary" style="width: 18rem;">
+                        <img src="img/ha2.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
+                        <div class="card-body">
+                            <p class="card-text">Explora la belleza y el confort que ofrecemos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border border-secondary" style="width: 18rem;">
+                        <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
+                        <div class="card-body">
+                            <p class="card-text">Relájate en nuestras cómodas habitaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border border-secondary" style="width: 18rem;">
+                        <img src="img/h4.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
+                        <div class="card-body">
+                            <p class="card-text">Disfruta de nuestras instalaciones modernas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card border border-secondary" style="width: 18rem;">
+                        <img src="img/ha2.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
+                        <div class="card-body">
+                            <p class="card-text">Saborea nuestra exquisita gastronomía.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border border-secondary" style="width: 18rem;">
+                        <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
+                        <div class="card-body">
+                            <p class="card-text">Descubre nuestras actividades recreativas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border border-secondary" style="width: 18rem;">
+                        <img src="img/h4.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen">
+                        <div class="card-body">
+                            <p class="card-text">Relájate en nuestras áreas comunes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="foot">
