@@ -90,7 +90,7 @@
 	<?php
 		if(isset($_POST['floor'])){
 
-	?>
+	?>set_socket_blocking
 		
 		<?php 
 
@@ -99,7 +99,9 @@
 	</div>
 
 	<div id="foot">
-	Juan Carlos Chavez Fuentes
+
+	 Juan Carlos Chavez Fuentes
+
 	</div>
 </body>
 </html>
