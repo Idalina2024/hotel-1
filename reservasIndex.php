@@ -127,7 +127,7 @@
     </div>
 
     <div id="foot">
-        Juan Carlos Chavez Fuentes © 2020
-    </div>
+    HOSTAL TRAVEL-EQUIPO DE DESARROLLO "YIT" © <?php echo date("Y-m-d"); ?>
+</div>
 </body>
 </html>
