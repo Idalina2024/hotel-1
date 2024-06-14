@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Hotel - Registro</title>
@@ -67,7 +66,8 @@
     
     <div id="header">
         <div id="nav">
-            <ul><li><a href="habitacionesIndex.php">Habitaciones</a></li>
+            <ul>
+                <li><a href="habitacionesIndex.php">Habitaciones</a></li>
                 <li><a href="reservasIndex.php">Reservas</a></li>
                 <li><a href="registro.php">Registro</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
@@ -75,39 +75,41 @@
         </div>
     </div>
 
-    <div id="body">
+    <div id="body"><h2>Registro Clientes</h2>
+        <div class="registro-container">
         
-        <h2>Registro Clientes</h2>
+            <div class="imagen-registro">
+                <img src="img/h4.jpg" alt="Imagen de registro" />
+            </div>
 
-        <form action="registro.php" method="POST">
+            <form action="registro.php" method="POST">
+                <input type="hidden" name="idCliente" value="<?php echo $cli->getIdCliente() ?>" />
+                <input type="hidden" name="operacion" value="<?php echo $cli->getIdCliente() > 0 ? 'actualizar' : 'registrar' ?>" />
+                
+                <label>Nombre</label> <input type="text" name="nombre" class="custom-input" length="25" value="<?php echo $cli->getNombre(); ?>" />
+                <label>Apellido</label> <input type="text" name="apellido" class="custom-input" length="25" value="<?php echo $cli->getApellido(); ?>" />
+                <label>Email</label> <input type="text" name="email" class="custom-input" length="35" value="<?php echo $cli->getEmail(); ?>" />
+                <label>Contraseña</label> <input type="password" name="contrasena" class="custom-input" length="25" />
+                <label>DNI</label> <input type="number" name="dni" class="custom-input" length="8" value="<?php echo $cli->getDni(); ?>" />
+                <label>Pais</label>
+                
+                <select name="pais">
+                    <option selected value="0">--Seleccione--</option>
+                    <?php foreach($pModel->listar() as $r){?>
+                    <option value="<?php echo $r->getAbrev(); ?>">
+                        <?php echo $r->getNombrePais(); ?>
+                    </option>
+                    <?php } ?>
+                </select>
 
-            <input type="hidden" name="idCliente" value="<?php echo $cli->getIdCliente() ?>" />
-            <input type="hidden" name="operacion" value="<?php echo $cli->getIdCliente() > 0 ? 'actualizar' : 'registrar' ?>" />
-            
-            
-            <label>Nombre</label> <input type="text" name="nombre" class="custom-input" length="25" value="<?php echo $cli->getNombre(); ?>" />
-            <label>Apellido</label> <input type="text" name="apellido" class="custom-input" length="25" value="<?php echo $cli->getApellido(); ?>" />
-            <label>Email</label> <input type="text" name="email" class="custom-input" length="35" value="<?php echo $cli->getEmail(); ?>" />
-            <label>Contraseña</label> <input type="password" name="contrasena" class="custom-input" length="25" />
-            <label>DNI</label> <input type="number" name="dni" class="custom-input" length="8" value="<?php echo $cli->getDni(); ?>" />
-            <label>Pais</label>
-            
-            <!-- Lista desplegable auto-completable Paises -->
-            <select name="pais">
-                <option selected value="0">--Seleccione--</option>
-                <?php foreach($pModel->listar() as $r){?>
-                <option value="<?php echo $r->getAbrev(); ?>">
-                    <?php echo $r->getNombrePais(); ?>
-                </option>
-                <?php } ?>
-            </select>
+                <label>Direccion</label><input type="text" name="direccion" class="custom-input" length="25" value="<?php echo $cli->getDireccion(); ?>" />
+                <label>Telefono</label><input type="text" name="telefono" class="custom-input" length="15" value="<?php echo $cli->getTelefono(); ?>" />
 
-            <label>Direccion</label><input type="text" name="direccion" class="custom-input" length="25" value="<?php echo $cli->getDireccion(); ?>" />
-            <label>Telefono</label><input type="text" name="telefono" class="custom-input" length="15" value="<?php echo $cli->getTelefono(); ?>" />
+                <input type="submit" value="Guardar">
+            </form>
 
-            <input type="submit" value="Guardar">
-
-        </form>
+           
+        </div>
     </div>
 
     <div id="foot">
@@ -122,6 +124,32 @@
             padding: 5px;
             margin-bottom: 10px;
             width: 100%;
+        }
+        .registro-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .imagen-registro img {
+            display: block;
+            border-radius: 10px; /* Bordes redondeados para la imagen */
+            width: 400px;
+            height: 500px;
+        }
+        form {
+            flex: 1;
+        }
+        .registro-titulo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+        .registro-titulo h2 {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            font-size: 2em;
         }
     </style>
 </body>
