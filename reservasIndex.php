@@ -58,6 +58,18 @@ if(isset($_POST['operacion'])){
         .title h1 {
             color: #800080; /* Color morado */
         }
+        .central-image {
+            display: flex;
+            align-items: center; /* Centra verticalmente los elementos */
+        }
+        .central-image img {
+            margin-right: 10px; /* Espacio entre la imagen y el texto */
+        }
+        .text-container {
+            flex: 1; /* El texto ocupa todo el espacio restante */
+            margin-left: 10px; /* Espacio a la izquierda del texto */
+            text-align: justify; /* Alineación justificada del texto */
+        }
     </style>
 </head>
 <body>
@@ -118,9 +130,13 @@ if(isset($_POST['operacion'])){
                 <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ ?>
                 <input style="display:"  type="submit" name="submit" value="Reservar">
                 <?php }else{
-                    echo "<h2>Necesario logearse como cliente para realizar reservas</h2>";
-                    // Imagen ajustada y un poco más grande
+                    echo '<div class="central-image">';
                     echo '<img src="img/h4.jpg" alt="Logo" height="160" width="160">';
+                    echo '<div class="text-container">';
+                    echo '<p style="font-size: 18px; font-weight: bold;">¡Reserva ahora y disfruta de nuestras increíbles ofertas!</p>';
+                    echo '<p style="font-size: 14px;">¡Tu aventura comienza aquí en nuestro acogedor hostal!</p>';
+                    echo '</div>';
+                    echo '</div>';
                 } ?>
             </ul>
         </form>
