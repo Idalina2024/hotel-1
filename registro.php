@@ -75,11 +75,11 @@
         </div>
     </div>
 
-    <div id="body"><h2>Registro Clientes</h2>
+    <div id="body">
+        <h2>Registro Clientes</h2>
         <div class="registro-container">
-        
             <div class="imagen-registro">
-                <img src="img/h4.jpg" alt="Imagen de registro" />
+                <img src="img/h4.jpg" alt="Imagen de registro" style="border: 5px solid #3498db; /* Borde azul */ border-radius: 10px; /* Bordes redondeados */ width: 400px; height: 500px; display: block;">
             </div>
 
             <form action="registro.php" method="POST">
@@ -107,8 +107,6 @@
 
                 <input type="submit" value="Guardar">
             </form>
-
-           
         </div>
     </div>
 
