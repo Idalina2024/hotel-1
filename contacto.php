@@ -55,6 +55,11 @@
             <p>917915214</p>
             <h3>Dirección:</h3>
             <p>jr Dos de Mayo 673</p>
+			<div class="card border border-secondary mb-3">
+    <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 300px; object-fit: cover;">
+    <div class="card-body">
+        <!-- Contenido adicional de la tarjeta aquí -->
+    </div>
         </div>
         <form id="comentario">
             <legend>Deja un comentario</legend>
