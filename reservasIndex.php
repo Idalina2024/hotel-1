@@ -1,46 +1,46 @@
 <?php 
-    session_start();
+session_start();
 
-    if(isset($_SESSION['nombre'])){
-        $nombre = $_SESSION['nombre'];
-        $apellido = $_SESSION['apellido'];
+if(isset($_SESSION['nombre'])){
+    $nombre = $_SESSION['nombre'];
+    $apellido = $_SESSION['apellido'];
+}
+
+require_once "reserva.model.php";
+require_once "reserva.entidad.php";
+require_once "habitacion.model.php";
+require_once "habitacion.entidad.php";
+require_once "tipoHabitacion.entidad.php";
+require_once "tipoHabitacion.model.php";
+
+$tipoModel = new TipoHabitacionModel();
+$tipo = new TipoHabitacion();
+
+$habitacionModel = new HabitacionModel();
+$hab = new Habitacion();
+
+$model = new ReservaModel();
+$res = new Reserva();
+
+if(isset($_POST['operacion'])){
+    $res->setIdCliente($_POST['idCliente']);
+    $res->setIdHabitacion($_POST['idHabitacion']); 
+    $res->setCantPersonas($_POST['cantPersonas']);
+    $res->setCheckIn($_POST['checkin']);
+    $res->setCheckOut($_POST['checkout']);
+
+    if($model->registrar($res)){
+        ?>
+        <script type="text/javascript">
+            alert("Reserva realizada con éxito! Te esperamos!");
+        </script>
+        <?php
+    } else {
+        echo "Ha ocurrido un error al registrar la reserva.";
     }
 
-    require_once "reserva.model.php";
-    require_once "reserva.entidad.php";
-    require_once "habitacion.model.php";
-    require_once "habitacion.entidad.php";
-    require_once "tipoHabitacion.entidad.php";
-    require_once "tipoHabitacion.model.php";
-
-    $tipoModel = new TipoHabitacionModel();
-    $tipo = new TipoHabitacion();
-
-    $habitacionModel = new HabitacionModel();
-    $hab = new Habitacion();
-
-    $model = new ReservaModel();
-    $res = new Reserva();
-
-    if(isset($_POST['operacion'])){
-        $res->setIdCliente($_POST['idCliente']);
-        $res->setIdHabitacion($_POST['idHabitacion']); 
-        $res->setCantPersonas($_POST['cantPersonas']);
-        $res->setCheckIn($_POST['checkin']);
-        $res->setCheckOut($_POST['checkout']);
-
-        if( $model->registrar($res)){
-            ?>
-            <script type="text/javascript">
-                alert("Reserva realizada con éxito! Te esperamos!");
-            </script>
-            <?php
-        }else{
-            echo "ha ocurrido un error";
-        }
-
-        $res->reinicioCampos();
-    }
+    $res->reinicioCampos();
+}
 ?>
 
 <!DOCTYPE html>
@@ -73,9 +73,7 @@
                 </ul>
             </li>
         </ul>
-        <?php
-    }
-    ?>
+    <?php } ?>
 
     <a class="engranaje" style="display: <?php if(isset($_SESSION['nombre'])){ echo "none"; } ?> " href="loginEmpleados.php"><img src="img/engranaje.png" height="25" width="25" /></a>
 
@@ -121,13 +119,15 @@
                 <input style="display:"  type="submit" name="submit" value="Reservar">
                 <?php }else{
                     echo "<h2>Necesario logearse como cliente para realizar reservas</h2>";
+                    // Imagen ajustada y un poco más grande
+                    echo '<img src="img/h4.jpg" alt="Logo" height="160" width="160">';
                 } ?>
             </ul>
         </form>
     </div>
 
     <div id="foot">
-    HOSTAL TRAVEL-EQUIPO DE DESARROLLO "YIT" © <?php echo date("Y-m-d"); ?>
-</div>
+        HOSTAL TRAVEL-EQUIPO DE DESARROLLO "YIT" © <?php echo date("Y-m-d"); ?>
+    </div>
 </body>
 </html>
