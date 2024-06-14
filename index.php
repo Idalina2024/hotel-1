@@ -219,25 +219,25 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card border border-secondary mb-3">
-                <img src="img/ha2.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
+                <img src="img/sala.jpeg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                    <p class="card-text">Saborea nuestra exquisita gastronomía.</p>
+                    <p class="card-text">Disfuta de la comodidad de la sala.</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card border border-secondary mb-3">
-                <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
+                <img src="img/recreo.jpeg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                    <p class="card-text">Descubre nuestras actividades recreativas.</p>
+                    <p class="card-text">Descubre nuestras sonas recreativas.</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card border border-secondary mb-3">
-                <img src="img/h4.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
+                <img src="img/jacuzzi.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                    <p class="card-text">Relájate en nuestras áreas comunes.</p>
+                    <p class="card-text">Relájate en el jacuzzi.</p>
                 </div>
             </div>
         </div>
