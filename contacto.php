@@ -5,7 +5,7 @@
         $nombre = $_SESSION['nombre'];
         $apellido = $_SESSION['apellido'];
     }
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +14,12 @@
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
+    <style>
+        .card-img-top {
+            border: 3px solid #4A4A4A; /* Plomo oscuro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+        }
+    </style>
 </head>
 <body>
 	<?php 
@@ -56,22 +62,21 @@
             <h3>Dirección:</h3>
             <p>jr Dos de Mayo 673</p>
 			<div class="card border border-secondary mb-3">
-    <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 300px; object-fit: cover;">
-    <div class="card-body">
-        <!-- Contenido adicional de la tarjeta aquí -->
-    </div>
-        </div>
-        <form id="comentario">
-            <legend>Deja un comentario</legend>
-            <textarea rows="10" cols="70" name="comentario" maxlength="500">
+			    <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 300px; object-fit: cover;">
+			    <div class="card-body">
+			        <!-- Contenido adicional de la tarjeta aquí -->
+			    </div>
+			</div>
+	        <form id="comentario">
+	            <legend>Deja un comentario</legend>
+	            <textarea rows="10" cols="70" name="comentario" maxlength="500"></textarea>
+	            <input type="submit" value="Subir"/>
+	        </form>
+		</div>
 
-            </textarea>
-            <input type="submit" value="Subir"/>
-        </form>
-	</div>
-
-	<div id="foot">
-		Juan Carlos Chavez Fuentes © 2020
+		<div id="foot">
+			Juan Carlos Chavez Fuentes © 2020
+		</div>
 	</div>
 </body>
 </html>
