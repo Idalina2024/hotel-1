@@ -133,9 +133,9 @@ if(isset($_POST['operacion'])){
                     echo '<div class="central-image">';
                     echo '<img src="img/h4.jpg" alt="Logo" height="160" width="160">';
                     echo '<div class="text-container">';
-                    echo '<p style="font-size: 18px; font-weight: bold;">¡Reserva ahora y disfruta de nuestras increíbles ofertas!</p>';
-                    echo '<p style="font-size: 14px;">¡Tu aventura comienza aquí en nuestro acogedor hostal!</p>';
-                    echo '</div>';
+                    echo '<p style="font-size: 18px; font-weight: bold; color: blue;">¡Reserva ahora y disfruta de nuestras increíbles ofertas!</p>';
+                    echo '<p style="font-size: 14px; color: green;">¡Tu aventura comienza aquí en nuestro acogedor hostal!</p>';
+                     echo '</div>';
                     echo '</div>';
                 } ?>
             </ul>
