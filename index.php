@@ -49,7 +49,7 @@
         }
         .carousel-item img {
             width: 100%;
-            height: 80%;
+            height: 100%;
             object-fit: cover;
         }
         .carousel-caption {
@@ -126,6 +126,7 @@
 </head>
 <body>
     <div class="container">
+    
         <?php 
        
 
@@ -246,7 +247,7 @@
                         <div class="card border border-secondary mb-3">
                             <img src="img/sala.jpeg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
                             <div class="card-body">
-                                <p class="card-text">Disfuta de la comodidad de la sala.</p>
+                                <p class="card-text">Disfruta de la comodidad de la sala.</p>
                             </div>
                         </div>
                     </div>
@@ -274,6 +275,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
