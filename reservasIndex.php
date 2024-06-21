@@ -52,7 +52,7 @@ if(isset($_POST['operacion'])){
     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather+Sans&display=swap" rel="stylesheet">
     <style>
         body, h1, h2, li, a, input, select {
-            font-family: 'Lora', serif;
+            font-family: 'Cairo', sans-serif;
             color: #4CAF50;
         }
         .title h1 {
@@ -133,8 +133,8 @@ if(isset($_POST['operacion'])){
                     echo '<div class="central-image">';
                     echo '<img src="img/h4.jpg" alt="Logo" height="160" width="160">';
                     echo '<div class="text-container">';
-                    echo '<p style="font-size: 18px; font-weight: bold; color: blue;">¡Reserva ahora y disfruta de nuestras increíbles ofertas!</p>';
-                    echo '<p style="font-size: 14px; color: green;">¡Tu aventura comienza aquí en nuestro acogedor hostal!</p>';
+                    echo '<p style="font-size: 18px; font-weight: bold; color: black;">¡Reserva ahora y disfruta de nuestras increíbles ofertas!</p>';
+                    echo '<p style="font-size: 14px; color: black;">¡Tu aventura comienza aquí en nuestro acogedor hostal!</p>';
                      echo '</div>';
                     echo '</div>';
                 } ?>
