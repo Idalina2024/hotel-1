@@ -13,11 +13,14 @@
 	<title>Hotel - Contacto</title>
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 	<link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
-	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans|Lobster&display=swap" rel="stylesheet">
     <style>
         .card-img-top {
             border: 3px solid #4A4A4A; /* Plomo oscuro */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+        }
+        .title h1 {
+            font-family: 'Lobster', cursive;
         }
     </style>
 </head>
