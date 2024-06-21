@@ -49,7 +49,7 @@ if(isset($_POST['operacion'])){
     <title>Hostal - Reservas</title>
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
-    <link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather+Sans&display=swap" rel="stylesheet">
     <style>
     body, h1, h2, li, a, input, select {
         font-family: 'Cairo', sans-serif;
@@ -63,7 +63,8 @@ if(isset($_POST['operacion'])){
         align-items: center; /* Centra verticalmente los elementos */
     }
     .central-image img {
-        margin-right: 10px; /* Espacio entre la imagen y el texto */
+        margin-right: 30px; /* Espacio entre la imagen y el texto */
+        border: 2px solid black; /* Borde negro */
     }
     .text-container {
         flex: 1; /* El texto ocupa todo el espacio restante */
