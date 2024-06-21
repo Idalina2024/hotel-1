@@ -19,10 +19,19 @@
 	        border: 5px solid #ccc; /* Establece un borde gris */
 	        border-radius: 10px; /* Redondea los bordes */
 	        padding: 5px; /* Añade espacio entre la imagen y el borde */
+	        max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho disponible */
+	        height: auto; /* Ajusta la altura automáticamente */
 	    }
 	    .title h1 {
-	        font-family: 'Pacifico', cursive;
+	        font-family: 'Pacifico', cursive; /* Cambia la fuente a 'Pacifico' */
 	        font-size: 2.5em; /* Tamaño reducido */
+	    }
+	    .carousel-item {
+	    	display: none; /* Ocultar todas las imágenes inicialmente */
+	    	width: 100%; /* Ocupar todo el ancho del contenedor */
+	    }
+	    .carousel-item.active {
+	    	display: block; /* Mostrar la imagen activa */
 	    }
 	</style>
 </head>
@@ -47,7 +56,7 @@
 
 	<a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
 
-	<a class="title" href="index.php"><h1>HOSTAL TRAVEL</h1></a>
+	<a class="title" href="index.php"><h1 style="font-family: 'Arial', sans-serif;">HOSTAL TRAVEL</h1></a>
     
 	<div id="header">
 		
@@ -68,45 +77,17 @@
 			<input onchange="this.form.submit();" name="floor" type="radio" value="2" id="floor2" <?php if (isset($_POST['floor']) && $_POST['floor'] == '2'){echo 'checked="checked"';} ?>><label for="floor2">Piso 2</label>
 			<input onchange="this.form.submit();" name="floor" type="radio" value="3" id="floor3" <?php if (isset($_POST['floor']) && $_POST['floor'] == '3'){echo 'checked="checked"';} ?>><label for="floor3">Piso 3</label>
 		</form>
-		<div class="carousel-item active" style="display: inline-block; margin-right: 100px;">
-          <img src="img/ha2.jpg" class="d-block w-100 square-image" style="width: 200px; height: auto;" alt="50">
+		<div class="carousel-item <?php echo isset($_POST['floor']) ? 'active' : ''; ?>" style="display: inline-block; margin-right: 100px;">
+			<?php if (isset($_POST['floor']) && $_POST['floor'] == '1') : ?>
+          		<img src="img/ha2.jpg" class="d-block w-100 square-image" style="max-width: 200px; height: auto;" alt="50">
+        	<?php elseif (isset($_POST['floor']) && $_POST['floor'] == '2') : ?>
+            	<img src="img/ha3.jpg" class="d-block w-100 square-image" style="max-width: 200px; height: auto;" alt="50">
+        	<?php elseif (isset($_POST['floor']) && $_POST['floor'] == '3') : ?>
+            	<img src="img/h4.jpg" class="d-block w-100 square-image" style="max-width: 200px; height: auto;" alt="50">
+        	<?php endif; ?>
         </div>
-        <div class="carousel-item active" style="display: inline-block; margin-right: 100px;">
-            <img src="img/ha3.jpg" class="d-block w-100 square-image" style="width: 270px; height: auto;" alt="50">
-        </div>
-        <div class="carousel-item active" style="display: inline-block;">
-             <img src="img/h4.jpg" class="d-block w-100 square-image" style="width: 152px; height: auto;" alt="50">
-        </div>
-		
-
-		<?php
-
-			if(isset($_POST['floor'])){
-				$floor = $_POST['floor'];
-				$route = "";
-				switch ($floor) {
-					case '1':
-						$route="piso1.svg";
-						break;
-					case '2':
-						$route="piso2.svg";
-						break;
-					case '3':
-						$route="piso3.svg";
-					break;
-				}
-			}
-		?>
 	</div>
-	<?php
-		if(isset($_POST['floor'])){
-
-	?>set_socket_blocking
 		
-		<?php 
-
-		}
-		?>
 	</div>
 
 	<div id="foot">

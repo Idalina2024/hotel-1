@@ -49,10 +49,10 @@ if(isset($_POST['operacion'])){
     <title>Hostal - Reservas</title>
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
-    <link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather+Sans&display=swap" rel="stylesheet">
     <style>
         body, h1, h2, li, a, input, select {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Lora', serif;
             color: #4CAF50;
         }
         .title h1 {
