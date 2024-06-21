@@ -3,7 +3,13 @@
     <title>Hotel - Registro</title>
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
-    <link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans|Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        .title h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em; /* Ajusta el tamaño de la fuente */
+        }
+    </style>
 </head>
 <body>
     <?php 
