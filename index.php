@@ -39,17 +39,18 @@
             height: 80vh;
             margin: 0 auto;
             position: relative;
+            overflow: hidden; /* Añadido para evitar que las imágenes del carrusel desplacen el contenido */
         }
         .carousel-inner {
             height: 100%;
         }
         .carousel-item {
             position: relative;
-            height: 100vh;
+            height: 100%;
         }
         .carousel-item img {
             width: 100%;
-            height: 100%;
+            height: auto; /* Ajuste para mantener la proporción de las imágenes */
             object-fit: cover;
         }
         .carousel-caption {
@@ -126,16 +127,12 @@
 </head>
 <body>
     <div class="container">
-    
         <?php 
-       
-
         if(isset($_SESSION['nombre'])){
             $nombre = $_SESSION['nombre'];
             $apellido = $_SESSION['apellido'];
         }
         ?>
-
         <?php 
         if(isset($_SESSION['nombre'])){ ?>
             <ul class="dropdown">
@@ -151,16 +148,12 @@
             <?php
         }
         ?>
-
         <a class="engranaje" style="display: <?php if(isset($_SESSION['nombre'])){ echo "none"; } ?> " href="loginEmpleados.php"><img src="img/engranaje.png" height="25" width="25" /></a>
-
         <a class="icono-login" style="display: <?php if(isset($_SESSION['nombre']) || isset($_SESSION['usuario'])){ echo "none"; } ?> " href="loginClientes.php"><img src="img/login.jfif" height="25" width="25" /></a>
-
         <div class="header-title">
             <img src="img/logohostaultimo1.jpg" alt="Logo">
             <a class="title" href="index.php"><h1>HOSTAL TRAVEL</h1></a>
         </div>
-        
         <div id="header">
             <div id="nav">
                 <ul>
@@ -247,7 +240,7 @@
                         <div class="card border border-secondary mb-3">
                             <img src="img/sala.jpeg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 200px; object-fit: cover;">
                             <div class="card-body">
-                                <p class="card-text">Disfruta de la comodidad de la sala.</p>
+                                <p class="card-text">Disfuta de la comodidad de la sala.</p>
                             </div>
                         </div>
                     </div>
