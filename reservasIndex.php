@@ -51,26 +51,28 @@ if(isset($_POST['operacion'])){
     <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
     <link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans&display=swap" rel="stylesheet">
     <style>
-        body, h1, h2, li, a, input, select {
-            font-family: 'Cairo', sans-serif;
-            color: #4CAF50;
-        }
-        .title h1 {
-            color: #800080; /* Color morado */
-        }
-        .central-image {
-            display: flex;
-            align-items: center; /* Centra verticalmente los elementos */
-        }
-        .central-image img {
-            margin-right: 10px; /* Espacio entre la imagen y el texto */
-        }
-        .text-container {
-            flex: 1; /* El texto ocupa todo el espacio restante */
-            margin-left: 10px; /* Espacio a la izquierda del texto */
-            text-align: justify; /* Alineación justificada del texto */
-        }
-    </style>
+    body, h1, h2, li, a, input, select {
+        font-family: 'Cairo', sans-serif;
+        color: #000000; /* Color negro */
+    }
+    .title h1 {
+        color: #000000; /* Color negro */
+    }
+    .central-image {
+        display: flex;
+        align-items: center; /* Centra verticalmente los elementos */
+    }
+    .central-image img {
+        margin-right: 30px; /* Espacio entre la imagen y el texto */
+        border: 2px solid black; /* Borde negro */
+    }
+    .text-container {
+        flex: 1; /* El texto ocupa todo el espacio restante */
+        margin-left: 10px; /* Espacio a la izquierda del texto */
+        text-align: justify; /* Alineación justificada del texto */
+        color: #000000; /* Color negro */
+    }
+</style>
 </head>
 <body>
     <?php 
@@ -133,8 +135,8 @@ if(isset($_POST['operacion'])){
                     echo '<div class="central-image">';
                     echo '<img src="img/h4.jpg" alt="Logo" height="160" width="160">';
                     echo '<div class="text-container">';
-                    echo '<p style="font-size: 18px; font-weight: bold; color: blue;">¡Reserva ahora y disfruta de nuestras increíbles ofertas!</p>';
-                    echo '<p style="font-size: 14px; color: green;">¡Tu aventura comienza aquí en nuestro acogedor hostal!</p>';
+                    echo '<p style="font-size: 18px; font-weight: bold; color: black;">¡Reserva ahora y disfruta de nuestras increíbles ofertas!</p>';
+                    echo '<p style="font-size: 14px; color: black;">¡Tu aventura comienza aquí en nuestro acogedor hostal!</p>';
                      echo '</div>';
                     echo '</div>';
                 } ?>
