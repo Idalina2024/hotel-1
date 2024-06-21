@@ -58,12 +58,24 @@
 	<div id="body">
 		<h2>Contacto </h2>
 		<div id="contacto">
-            <h3>Nuestro e-mail</h3>
-            <p>hostaltravel@.com</p>
-            <h3>Telefono:</h3>
-            <p>917915214</p>
-            <h3>Dirección:</h3>
-            <p>jr Dos de Mayo 673</p>
+		<div style="display: flex; align-items: center;">
+          <h3 style="margin: 0;">Nuestro e-mail</h3>
+            <img src="img/gmail.png" alt="Icono de correo electrónico" height="16" width="16" style="vertical-align: middle; margin-left: 5px;">
+        </div>
+             <p style="margin-top: 5px;">hostaltravel@.com</p>
+
+		<div style="display: flex; align-items: center;">
+            <h3 style="margin: 0;">Telefono:</h3>
+            <img src="img/telefono.png" alt="Icono de teléfono" height="16" width="16" style="vertical-align: middle; margin-left: 5px;">
+        </div>
+              <p style="margin-top: 5px;">917915214</p>
+
+	    <div style="display: flex; align-items: center;">
+            <h3 style="margin: 0;">Dirección:</h3>
+             <img src="img/direccion.png" alt="Icono de dirección" height="16" width="16" style="vertical-align: middle; margin-left: 5px;">
+        </div>
+            <p style="margin-top: 5px;">jr Dos de Mayo 673</p>
+
 			<div class="card border border-secondary mb-3">
 			    <img src="img/ha3.jpg" class="card-img-top border border-secondary" alt="Descripción de la imagen" style="height: 300px; object-fit: cover;">
 			    <div class="card-body">
