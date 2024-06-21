@@ -63,8 +63,7 @@ if(isset($_POST['operacion'])){
         align-items: center; /* Centra verticalmente los elementos */
     }
     .central-image img {
-        margin-right: 30px; /* Espacio entre la imagen y el texto */
-        border: 2px solid black; /* Borde negro */
+        margin-right: 10px; /* Espacio entre la imagen y el texto */
     }
     .text-container {
         flex: 1; /* El texto ocupa todo el espacio restante */

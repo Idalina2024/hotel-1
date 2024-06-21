@@ -13,6 +13,7 @@
             font-family: 'Roboto', sans-serif; /* Fuente para el cuerpo del texto */
             margin: 0;
             padding: 0;
+            position: relative; /* Añadido para que el posicionamiento absoluto sea relativo al cuerpo */
         }
         html, body {
             height: 100%;
@@ -20,6 +21,7 @@
         .container {
             background-color: #FFFFFF; /* Celeste pastel */
             min-height: 100%;
+            position: relative; /* Añadido para que el posicionamiento absoluto sea relativo al contenedor */
         }
         .header-title {
             display: flex;
@@ -84,6 +86,24 @@
         }
         .carousel-indicators .active {
             background-color: rgba(0, 0, 0, 0.7);
+        }
+        .facebook-logo {
+            position: absolute;
+            top: 10px; /* Ajusta la posición desde arriba */
+            right: 10px; /* Ajusta la posición desde la derecha */
+            z-index: 20;
+            transform: translateX(0); /* Añadido para mejorar la animación */
+            transition: transform 0.3s ease; /* Añadido para una animación suave */
+        }
+        .facebook-logo:hover {
+            transform: translateX(5px); /* Añadido para un efecto de desplazamiento al hacer hover */
+        }
+        .facebook-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Añadido para hacer el icono circular */
+            background-color: #3b5998; /* Añadido para el color de fondo de Facebook */
+            padding: 5px; /* Añadido para dar espacio al icono dentro del círculo */
         }
         @keyframes fadeInUp {
             from {
@@ -184,6 +204,11 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <div class="facebook-logo">
+                        <a href="https://www.facebook.com/profile.php?id=100086536038643" target="_blank">
+                            <img src="img/fack.png" alt="Facebook Logo">
+                        </a>
+                    </div>
                 </div>
             </div>
             <p> 
