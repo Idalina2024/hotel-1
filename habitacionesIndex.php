@@ -5,7 +5,7 @@
         $nombre = $_SESSION['nombre'];
         $apellido = $_SESSION['apellido'];
     }
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans|Pacifico&display=swap" rel="stylesheet">
 	<style>
 	    .square-image {
-	        border: 5px solid #ccc; /* Establece un borde gris */
+	        border: 5px solid #ccc; /* Establece un borde gris por defecto */
 	        border-radius: 10px; /* Redondea los bordes */
 	        padding: 5px; /* Añade espacio entre la imagen y el borde */
 	        max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho disponible */
@@ -32,6 +32,30 @@
 	    }
 	    .carousel-item.active {
 	    	display: block; /* Mostrar la imagen activa */
+	    }
+	    .image-with-text {
+	    	margin-bottom: 20px; /* Espacio entre imágenes */
+	    }
+	    .image-with-text img {
+	    	max-width: 200px; /* Tamaño máximo de las imágenes */
+	    	height: auto;
+	    	border: 5px solid #808080; /* Borde color plomo */
+	    	border-radius: 10px; /* Redondea los bordes */
+	    }
+	    .image-with-text p {
+	    	font-family: 'Cairo', sans-serif;
+	    	font-size: 1.2em;
+	    	margin-top: 5px; /* Espacio entre la imagen y el texto */
+	    	color: blue; /* Color del texto azul */
+	    }
+	    .image-row {
+	    	display: flex;
+	    	justify-content: center;
+	    	align-items: center;
+	    	margin-bottom: 20px; /* Espacio entre filas de imágenes */
+	    }
+	    .image-row .image-with-text {
+	    	margin: 0 10px;
 	    }
 	</style>
 </head>
@@ -75,15 +99,62 @@
 
 			<input onchange="this.form.submit();" name="floor" type="radio" value="1" id="floor1" <?php if (isset($_POST['floor']) && $_POST['floor'] == '1'){echo 'checked="checked"';} ?>><label for="floor1">Piso 1</label>
 			<input onchange="this.form.submit();" name="floor" type="radio" value="2" id="floor2" <?php if (isset($_POST['floor']) && $_POST['floor'] == '2'){echo 'checked="checked"';} ?>><label for="floor2">Piso 2</label>
-			<input onchange="this.form.submit();" name="floor" type="radio" value="3" id="floor3" <?php if (isset($_POST['floor']) && $_POST['floor'] == '3'){echo 'checked="checked"';} ?>><label for="floor3">Piso 3</label>
 		</form>
 		<div class="carousel-item <?php echo isset($_POST['floor']) ? 'active' : ''; ?>" style="display: inline-block; margin-right: 100px;">
 			<?php if (isset($_POST['floor']) && $_POST['floor'] == '1') : ?>
-          		<img src="img/ha2.jpg" class="d-block w-100 square-image" style="max-width: 200px; height: auto;" alt="50">
+				<div class="image-row">
+					<div class="image-with-text">
+          				<img src="img/ha2.jpg" alt="Imagen 1">
+          				<p style="color: blue;">Habitación 1</p>
+        			</div>
+        			<div class="image-with-text">
+          				<img src="img/ha2.jpg" alt="Imagen 2">
+          				<p style="color: blue;">Habitación 2</p>
+        			</div>
+					<div class="image-with-text">
+          				<img src="img/ha2.jpg" alt="Imagen 3">
+          				<p style="color: blue;">Habitación 3</p>
+        			</div>
+				</div>
+				<div class="image-row">
+					<div class="image-with-text">
+          				<img src="img/ha2.jpg" alt="Imagen 4">
+          				<p style="color: blue;">Habitación 4</p>
+        			</div>
+        			<div class="image-with-text">
+          				<img src="img/ha2.jpg" alt="Imagen 5">
+          				<p style="color: blue;">Habitación 5</p>
+        			</div>
+				</div>
         	<?php elseif (isset($_POST['floor']) && $_POST['floor'] == '2') : ?>
-            	<img src="img/ha3.jpg" class="d-block w-100 square-image" style="max-width: 200px; height: auto;" alt="50">
-        	<?php elseif (isset($_POST['floor']) && $_POST['floor'] == '3') : ?>
-            	<img src="img/h4.jpg" class="d-block w-100 square-image" style="max-width: 200px; height: auto;" alt="50">
+				<div class="image-row">
+					<div class="image-with-text">
+          				<img src="img/ha3.jpg" alt="Imagen 1">
+          				<p style="color: blue;">Habitación 6</p>
+        			</div>
+        			<div class="image-with-text">
+          				<img src="img/ha3.jpg" alt="Imagen 2">
+          				<p style="color: blue;">Habitación 7</p>
+        			</div>
+					<div class="image-with-text">
+          				<img src="img/ha3.jpg" alt="Imagen 3">
+          				<p style="color: blue;">Habitación 8</p>
+        			</div>
+				</div>
+				<div class="image-row">
+					<div class="image-with-text">
+          				<img src="img/ha3.jpg" alt="Imagen 4">
+          				<p style="color: blue;">Habitación 9</p>
+        			</div>
+        			<div class="image-with-text">
+          				<img src="img/ha3.jpg" alt="Imagen 5">
+          				<p style="color: blue;">Habitación 10</p>
+        			</div>
+					<div class="image-with-text">
+          				<img src="img/ha3.jpg" alt="Imagen 6">
+          				<p style="color: blue;">Habitación 11</p>
+        			</div>
+				</div>
         	<?php endif; ?>
         </div>
 	</div>
@@ -91,9 +162,7 @@
 	</div>
 
 	<div id="foot">
-
-	 Juan Carlos Chavez Fuentes
-
+		Juan Carlos Chavez Fuentes
 	</div>
 </body>
 </html>

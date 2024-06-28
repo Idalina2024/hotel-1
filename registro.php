@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Hotel - Registro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="icon" type="image/jpeg" href="img/logohostaultimo1.jpg">
     <link href="https://fonts.googleapis.com/css?family=Cairo|Merriweather+Sans|Dancing+Script&display=swap" rel="stylesheet">
@@ -84,8 +85,8 @@
     <div id="body">
         <h2>Registro Clientes</h2>
         <div class="registro-container">
-            <div class="imagen-registro">
-                <img src="img/h4.jpg" alt="Imagen de registro" style="border: 5px solid #3498db; /* Borde azul */ border-radius: 10px; /* Bordes redondeados */ width: 400px; height: 500px; display: block;">
+            <div class="imagen-registro" style="align-self: flex-end;">
+                <img src="img/h4.jpg" alt="Imagen de registro" style="border: 5px solid #3498db; /* Borde azul */ border-radius: 10px; /* Bordes redondeados */ width: 450px; height: 750px; display: block;">
             </div>
 
             <form action="registro.php" method="POST">
@@ -99,7 +100,7 @@
                 <label>DNI</label> <input type="number" name="dni" class="custom-input" length="8" value="<?php echo $cli->getDni(); ?>" />
                 <label>Pais</label>
                 
-                <select name="pais">
+                <select name="pais" class="form-control">
                     <option selected value="0">--Seleccione--</option>
                     <?php foreach($pModel->listar() as $r){?>
                     <option value="<?php echo $r->getAbrev(); ?>">
@@ -111,7 +112,7 @@
                 <label>Direccion</label><input type="text" name="direccion" class="custom-input" length="25" value="<?php echo $cli->getDireccion(); ?>" />
                 <label>Telefono</label><input type="text" name="telefono" class="custom-input" length="15" value="<?php echo $cli->getTelefono(); ?>" />
 
-                <input type="submit" value="Guardar">
+                <input type="submit" class="btn btn-primary" value="Guardar">
             </form>
         </div>
     </div>
@@ -138,8 +139,8 @@
         .imagen-registro img {
             display: block;
             border-radius: 10px; /* Bordes redondeados para la imagen */
-            width: 400px;
-            height: 500px;
+            width: 450px; /* Ancho aumentado */
+            height: 550px; /* Altura aumentada */
         }
         form {
             flex: 1;
@@ -156,5 +157,8 @@
             font-size: 2em;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
