@@ -35,7 +35,7 @@
             margin-right: 10px;
         }
         .carousel-container {
-            width: 100%;
+            width: 110%;
             height: 80vh;
             margin: 0 auto;
             position: relative;
@@ -123,6 +123,16 @@
             margin: 0;
             background-color: transparent; /* Fondo transparente */
         }
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #f8f9fa;
+            color: #6c757d;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -172,21 +182,39 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/hotel2.jpg" class="d-block w-100" alt="Hotel 1">
+                            <img src="img/PRIN.JPEG" class="d-block w-80" alt="Hotel 1">
+                            <img src="img/PNH.JPEG" class="d-block w-80" alt="Hotel 1">
                             <div class="carousel-caption">
+                                
                                 <h3>Bienvenido a Hostal Travel</h3>
                                 <p>Disfruta de una estancia inolvidable</p>
                             </div>
+                            
+                            
                         </div>
                         <div class="carousel-item">
-                            <img src="img/hotel3.jpg" class="d-block w-100" alt="Hotel 2">
+                            <img src="img/PNH.JPEG" class="d-block w-80" alt="Hotel 2">
+                           
                             <div class="carousel-caption">
                                 <h3>Confort y lujo</h3>
                                 <p>Nuestras habitaciones están diseñadas para tu comodidad</p>
                             </div>
+                            
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="img/PIN.JPEG" class="d-block w-80" alt="Hotel 2">
+                           
+                            <div class="carousel-caption">
+                                <h3>Confort y lujo</h3>
+                                <p>Nuestras habitaciones están diseñadas para tu comodidad</p>
+                            </div>
+                            
                         </div>
                         <!-- Agrega más imágenes aquí si es necesario -->
                     </div>
@@ -263,9 +291,73 @@
                 </div>
             </div>
         </div>
-        <div id="foot">
-            Juan Carlos Chavez Fuentes
+        <style>
+    #map {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Ajusta el margen según sea necesario */
+    }
+
+    #map iframe {
+        max-width: 100%; /* Ajusta el ancho máximo del iframe */
+    }
+</style>
+
+<div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.784040678345!2dTU_LONGITUD!3dTU_LATITUD!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sUbicaci%C3%B3n!5e0!3m2!1ses!2sus!4v1624842622206!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<style>
+    .container {
+        background-color: #aed6f1; /* Color celeste pastel */
+        padding: 20px; /* Ajusta el padding según sea necesario para separar el contenido del borde */
+    }
+
+    .section-background {
+        background-color: #ffc0cb; /* Color rosa pastel (ejemplo) */
+        padding: 20px; /* Ajusta el padding según sea necesario */
+        margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    }
+</style>
+<div class="container">
+    <div class="row justify-content-center section-background">
+        <div class="col-md-6 text-center">
+            <p>© 2024 Hostal Travel.</p>
+            <p>CONTACTO: 917915214.</p>
+            <p>FACEBOOK: Travel Hostal.</p>
         </div>
+      
+        <div class="col-md-6 text-center">
+            <p>Descubre la magia de una.</p>
+            <p>estancia inolvidable en.</p>
+            <p>Hostal Travel.</p>
+            <p>lujo, confort y serenidad en cada rincón.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        background-color: #aed6f1; /* Color celeste pastel */
+        padding: 20px; /* Ajusta el padding según sea necesario para separar el contenido del borde */
+    }
+
+    .section-background {
+        background-color: #ffc0cb; /* Color rosa pastel (ejemplo) */
+        padding: 20px; /* Ajusta el padding según sea necesario */
+        margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    }
+</style>
+
+    
+</div>
+    </div>
+</div>
+
+>
+        </div>
+    </div>
+
+    
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
