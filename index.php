@@ -308,14 +308,14 @@
 </div>
 <style>
     .container {
-        background-color: #aed6f1; /* Color celeste pastel */
+        background-color: #d3d3d3; /* Color celeste pastel */
         padding: 20px; /* Ajusta el padding según sea necesario para separar el contenido del borde */
     }
 
     .section-background {
-        background-color: #ffc0cb; /* Color rosa pastel (ejemplo) */
-        padding: 20px; /* Ajusta el padding según sea necesario */
-        margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    background-color: #d3d3d3; /* Color gris */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
     }
 </style>
 <div class="container">
@@ -337,16 +337,18 @@
 
 <style>
     .container {
-        background-color: #aed6f1; /* Color celeste pastel */
+        background-color: #b3d9ff; /* Color celeste claro */
         padding: 20px; /* Ajusta el padding según sea necesario para separar el contenido del borde */
     }
 
     .section-background {
-        background-color: #ffc0cb; /* Color rosa pastel (ejemplo) */
+        background-color: #80bfff; /* Color celeste más oscuro */
         padding: 20px; /* Ajusta el padding según sea necesario */
         margin-top: 20px; /* Ajusta el margen superior según sea necesario */
     }
 </style>
+
+
 
     
 </div>
